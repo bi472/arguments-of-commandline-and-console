@@ -1,12 +1,22 @@
 #!/usr/bin/env node
-Gamepad
-import * as readline from 'node:readline/promises';
-import { stdin as input, stdout as output } from 'node:process';
+const readline = require('node:readline');
+const { stdin: input, stdout: output } = require('node:process');
+
+const minNumber = 0
+const maxNumber = 100
+const randomNumber = Math.floor(minNumber + Math.random() * (maxNumber + 1 - minNumber))
 
 const rl = readline.createInterface({ input, output });
+console.log(`A number from ${minNumber} to ${maxNumber} has been guessed`)
 
-const answer = await rl.question('What do you think of Node.js? ');
+rl.setPrompt('Enter a number> ');
+rl.prompt();
 
-console.log(`Thank you for your valuable feedback: ${answer}`);
-
-rl.close();
+rl.on('line', (line) => {
+    +line == randomNumber ? rl.close(line) 
+        : +line > randomNumber ? console.log("The number is less") : console.log("The number is greater")
+    rl.prompt();
+}).on('close', () => {
+    console.log(`You guessed the number! (${randomNumber})`);
+    process.exit(0);
+});
