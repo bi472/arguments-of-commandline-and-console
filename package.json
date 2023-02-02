@@ -5,7 +5,8 @@
   "bin": {
     "current": "current.js",
     "add":"add.js",
-    "sub": "sub.js"
+    "sub": "sub.js",
+    "game": "game.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
