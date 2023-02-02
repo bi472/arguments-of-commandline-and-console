@@ -15,4 +15,11 @@ const argv = yargs(hideBin(process.argv))
         description: 'current date'
     })
     .argv
+    
+argv.year ? console.log("Current year: " + new Date().getFullYear()) 
+    : argv.month ? console.log("Current month: " + (new Date().getUTCMonth() + 1) )
+        : argv.date ? console.log("Current day: " + new Date().getUTCDate())
+            : console.log("unknown option")
+
+            
 
