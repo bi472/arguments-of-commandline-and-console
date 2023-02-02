@@ -2,11 +2,7 @@
   "name": "arguments-of-commandline-and-console",
   "version": "1.0.0",
   "description": "",
-  "bin": {
-    "current": "current.js",
-    "add":"add.js",
-    "sub": "sub.js"
-  },
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,8 +15,5 @@
   "bugs": {
     "url": "https://github.com/bi472/arguments-of-commandline-and-console/issues"
   },
-  "homepage": "https://github.com/bi472/arguments-of-commandline-and-console#readme",
-  "dependencies": {
-    "yargs": "^17.6.2"
-  }
+  "homepage": "https://github.com/bi472/arguments-of-commandline-and-console#readme"
 }
