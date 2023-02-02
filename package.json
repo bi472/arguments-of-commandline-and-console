@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "bin": {
-    "current": "current.js",
-    "add":"add.js",
-    "sub": "sub.js",
-    "game": "game.js"
+    "date_util": "date.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
